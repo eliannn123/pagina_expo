@@ -2,12 +2,14 @@
 interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
+import Navbar from '../components/Navbar.astro';
+import Header from '../components/Header.astro';
+import Info from '../components/Info.astro'
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es" class=" bg-secundario text-principal">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -17,7 +19,31 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Navbar />
+		<main>
+			<Header />
+			<Info />
+			<section class="bg-[url('/public/imgs/patron1.jpg')] bg-fit sm:h-screen lg:h-[78vh] justify-center flex items-center" id="subarea">
+				<div class=" bg-negro h-[40rem] w-[80vw] align-center absolute ">
+					<h1 class="text-8xl text-center h-20 w-[46rem] ml-[25.5rem] pt-8 text-comp1 ">Subáreas</h1>
+					<div class="flex space-x-40 justify-center mt-16">
+						<a href="" class=" transition duration-500 hover:scale-125 "><img src="/public/imgs/logo.jpg" class="rounded-full h-52 w-52"></a>
+						<a href="" class=" transition duration-500 hover:scale-125"><img src="/public/imgs/logo.jpg" class="rounded-full h-52 w-52"></a>
+						<a href="" class=" transition duration-500 hover:scale-125"><img src="/public/imgs/logo.jpg" class="rounded-full h-52 w-52"></a>
+						<a href="" class=" transition duration-500 hover:scale-125"><img src="/public/imgs/logo.jpg" class="rounded-full h-52 w-52"></a>
+					</div>
+					<div class="flex flex-row space-x-48 justify-center mt-16 text-3xl text-comp1">
+						<a href="" class="translate-x-2"><span class="">Programación</span></a>
+						<a href=""><span >Técnicas de Diseño</span></a>
+						<a href="" class="translate-x-[0.8rem]"><span >Diseño Web</span></a>
+						<a href="" class="translate-x-6"><span >Emprendedurismo</span></a>
+					</div>
+				</div>
+			</section>
+			<section></section>
+			<section></section>
+			<slot />
+		</main>
 	</body>
 </html>
 <style is:global>
@@ -33,19 +59,10 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: "Tanker",system-ui, sans-serif;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	@font-face {
+		font-family: "Tanker";
+		src: url(/public/fonts/Tanker-Regular.woff2) format('woff2');
 	}
 </style>

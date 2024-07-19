@@ -6,6 +6,11 @@ const { title } = Astro.props;
 import Navbar from '../components/Navbar.astro';
 import Header from '../components/Header.astro';
 import Info from '../components/Info.astro'
+import Areas from '../components/Areas.astro';
+import {Component} from '../components/Carousel.jsx'
+import {Componentt} from '../components/Carousel2.jsx'
+import {Componente} from '../components/Carousel3.jsx'
+import Galeria from '../components/galeria.astro';
 ---
 
 <!doctype html>
@@ -23,25 +28,11 @@ import Info from '../components/Info.astro'
 		<main>
 			<Header />
 			<Info />
-			<section class="bg-[url('/public/imgs/patron1.jpg')] bg-fit sm:h-screen lg:h-[78vh] justify-center flex items-center" id="subarea">
-				<div class=" bg-negro h-[40rem] w-[80vw] align-center absolute ">
-					<h1 class="text-8xl text-center h-20 w-[46rem] ml-[25.5rem] pt-8 text-comp1 ">Subáreas</h1>
-					<div class="flex space-x-40 justify-center mt-16">
-						<a href="" class=" transition duration-500 hover:scale-125 "><img src="/public/imgs/logo.jpg" class="rounded-full h-52 w-52"></a>
-						<a href="" class=" transition duration-500 hover:scale-125"><img src="/public/imgs/logo.jpg" class="rounded-full h-52 w-52"></a>
-						<a href="" class=" transition duration-500 hover:scale-125"><img src="/public/imgs/logo.jpg" class="rounded-full h-52 w-52"></a>
-						<a href="" class=" transition duration-500 hover:scale-125"><img src="/public/imgs/logo.jpg" class="rounded-full h-52 w-52"></a>
-					</div>
-					<div class="flex flex-row space-x-48 justify-center mt-16 text-3xl text-comp1">
-						<a href="" class="translate-x-2"><span class="">Programación</span></a>
-						<a href=""><span >Técnicas de Diseño</span></a>
-						<a href="" class="translate-x-[0.8rem]"><span >Diseño Web</span></a>
-						<a href="" class="translate-x-6"><span >Emprendedurismo</span></a>
-					</div>
-				</div>
-			</section>
-			<section></section>
-			<section></section>
+			<Areas />
+			<div id="progra"><Component client:load/></div>
+			<div id="tecnicas"><Componentt client:load/></div>
+			<Componente client:load/>
+			<Galeria/>
 			<slot />
 		</main>
 	</body>
@@ -64,5 +55,13 @@ import Info from '../components/Info.astro'
 	@font-face {
 		font-family: "Tanker";
 		src: url(/public/fonts/Tanker-Regular.woff2) format('woff2');
+	}
+	@keyframes show {
+		from{
+			opacity: 0; scale:10%
+		}
+		to{
+			opacity: 1; scale: 100%;
+		}
 	}
 </style>

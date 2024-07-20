@@ -23,7 +23,7 @@ export function Componente() {
           <div className=" bg-negro h-[40rem] w-[80vw] text-center absolute ">
             <h1 className="text-8xl text-principal pt-32 text-right mr-28">Emprendedurismo</h1>
             <div className="flex">
-                <img src="/public/imgs/ingles.jpg" className="rounded-full h-96 w-96 mt-[-4rem] translate-x-32" />
+                <img src="/public/imgs/emp.jpeg" className="rounded-full h-96 w-96 mt-[-4rem] translate-x-32" />
                 <p class="text-right ml-[19rem] pt-20 text-4xl">
                 Esta subárea se especializa en la creación y mejora de <br />
                 sitios web utilizando herramientas fundamentales <br />

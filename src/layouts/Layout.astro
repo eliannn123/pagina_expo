@@ -7,10 +7,12 @@ import Navbar from '../components/Navbar.astro';
 import Header from '../components/Header.astro';
 import Info from '../components/Info.astro'
 import Areas from '../components/Areas.astro';
-import {Component} from '../components/Carousel.jsx'
-import {Componentt} from '../components/Carousel2.jsx'
+import Tecnincas from '../components/Tecnincas.astro'
+import Progra from '../components/Progra.astro'
 import {Componente} from '../components/Carousel3.jsx'
-import Galeria from '../components/galeria.astro';
+import Galeria from '../components/galeria.astro'
+import Relleno from '../components/Relleno.astro'
+import Footer from '../components/Footer.astro'
 ---
 
 <!doctype html>
@@ -22,6 +24,7 @@ import Galeria from '../components/galeria.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script src="https://cdn.tailwindcss.com/3.2.4"></script>
 	</head>
 	<body>
 		<Navbar />
@@ -29,10 +32,16 @@ import Galeria from '../components/galeria.astro';
 			<Header />
 			<Info />
 			<Areas />
-			<div id="progra"><Component client:load/></div>
-			<div id="tecnicas"><Componentt client:load/></div>
+			<Progra/>
+			<Tecnincas/>
 			<Componente client:load/>
 			<Galeria/>
+			<Relleno/>
+			<Relleno/>
+			<div class="h-[50vh]">
+
+			</div>
+			<Footer/>
 			<slot />
 		</main>
 	</body>

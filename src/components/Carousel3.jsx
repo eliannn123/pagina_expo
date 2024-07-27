@@ -25,11 +25,10 @@ export function Componente() {
             <div className="flex">
                 <img src="/imgs/emp.jpeg" className="rounded-full hidden  xl:flex max-xl:translate-x-40 max-xl:pt-4 xl:mt-[-2rem] translate-x-32 h-72 w-72 xl:h-96 xl:w-96" />
                 <p class="xl:ml-36 lg:ml-4 2xl:ml-96 ml-2  xl:pt-14 pt-20 2xl:pt-20 md:text-4xl  max-[400px]:text-xl text-2xl xl:text-right  text-center 2xl:w-[35vw] xl:w-[40vw] w-[77vw] md:w-[80v2] md:h-[20vh]">
-                Esta subárea se especializa en la creación y mejora de 
-                sitios web utilizando herramientas fundamentales 
-                como HTML, CSS y JavaScript, junto con plataformas 
-                populares como Wix y Wordpress. Se centra en el
-                diseño y desarrollo de interfaces web efectivas y funcionales.
+                En esta subárea aprendemos a realizar de la mejor manera el proceso de 
+                tener un emprendimiento o negocio por nuestra cuenta, todas estas
+                consideraciones, así como habilidades en finanzas, trabajo en equipo e 
+                innovación y conocer como trabajan las diferentes áreas de una empresa.
                 </p>
             </div>
           </div>
